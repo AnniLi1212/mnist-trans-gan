@@ -310,5 +310,6 @@ plt.figure()
 plt.plot(lossg, label='Generator loss')
 plt.plot(lossd, label='Discriminator Loss')
 plt.legend()
-plt.savefig('/graphganvol/anni/transgan/mnist/output/loss.png')
+plt.savefig('')
+# plt.savefig('C:\Users\84592\Desktop\mnist-trans-gan')
 
