@@ -260,7 +260,8 @@ for epoch in range(epochs):
     # make the images as grid
     generated_img = make_grid(generated_img)
     # save the generated torch tensor models to disk
-    save_generator_image(generated_img, f"/graphganvol/anni/mnist/output/gen_img{epoch}.png")
+     save_generator_image(generated_img, f"/C:\Users\84592\Desktop\mnist-trans-gan/output/gen_img{epoch}.png")
+    # save_generator_image(generated_img, f"/graphganvol/anni/mnist/output/gen_img{epoch}.png")
     images.append(generated_img)
     epoch_loss_g = loss_g / bi # total generator loss for the epoch
     epoch_loss_d = loss_d / bi # total discriminator loss for the epoch
@@ -277,7 +278,9 @@ for epoch in range(epochs):
 
 
 print('DONE TRAINING')
-torch.save(generator.state_dict(), '/graphganvol/anni/mnist/output/generator.pth')
+C:/Users/84592/Desktop/mnist-trans-gan/output
+torch.save(generator.state_dict(), 'C:/Users/84592/Desktop/mnist-trans-gan/output/generator.pth')
+# torch.save(generator.state_dict(), '/graphganvol/anni/mnist/output/generator.pth')
 
 
 # In[23]:
@@ -285,7 +288,9 @@ torch.save(generator.state_dict(), '/graphganvol/anni/mnist/output/generator.pth
 
 # save the generated images as GIF file
 imgs = [np.array(to_pil_image(img)) for img in images]
-imageio.mimsave('/graphganvol/anni/mnist/output/out.gif', imgs)
+
+imageio.mimsave('C:/Users/84592/Desktop/mnist-trans-gan/output/out.gif', imgs)
+# imageio.mimsave('/graphganvol/anni/mnist/output/out.gif', imgs)
 
 
 # In[24]:
@@ -310,6 +315,6 @@ plt.figure()
 plt.plot(lossg, label='Generator loss')
 plt.plot(lossd, label='Discriminator Loss')
 plt.legend()
-plt.savefig('')
-# plt.savefig('C:\Users\84592\Desktop\mnist-trans-gan')
+plt.savefig('C:/Users/84592/Desktop/mnist-trans-gan/output/loss.png')
+# plt.savefig('/graphganvol/anni/mnist/output/loss.png')
 
