@@ -260,7 +260,7 @@ for epoch in range(epochs):
     # make the images as grid
     generated_img = make_grid(generated_img)
     # save the generated torch tensor models to disk
-     save_generator_image(generated_img, f"/C:\Users\84592\Desktop\mnist-trans-gan/output/gen_img{epoch}.png")
+     save_generator_image(generated_img, f"C:/Users/84592/Desktop/mnist-trans-gan/output/gen_img{epoch}.png")
     # save_generator_image(generated_img, f"/graphganvol/anni/mnist/output/gen_img{epoch}.png")
     images.append(generated_img)
     epoch_loss_g = loss_g / bi # total generator loss for the epoch
